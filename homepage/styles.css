@@ -1,0 +1,80 @@
+.nav {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.jumbotron {
+    margin: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+h1, h3, h5 {
+    text-align: center;
+}
+
+p {
+    line-height: 25px;
+}
+
+a:hover {
+    color: red;
+}
+
+.main {
+    min-height: calc(100vh - 50px);
+}
+
+footer {
+    text-align: center;
+    margin: auto;
+    height: 50px;
+}
+
+.sm-pic {
+    width: 200px;
+    height: 200px;
+}
+
+.pic {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+}
+
+.box {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: auto; /*margin: 10px 5px;*/
+    padding: 4px;
+}
+
+.entry {
+    margin: 10px;
+    padding: 5px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.entry-radio {
+    width: 25%;
+    margin: 10px;
+}
+
+button {
+    margin: auto;
+}
+
+.answer-hidden {
+    visibility: hidden;
+}
+
+.answer-visible {
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 5px;
+    visibility: visible;
+}
+

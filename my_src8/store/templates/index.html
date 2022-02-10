@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h2 class="d-flex justify-content-center"> BOOKS </h2>
+        </div>
+    </div>
+    {% for book in book_rows %}
+        <div class="input-group mb-3">
+            <li class="form-control" aria-describedby="button-addon2">{{ book.title }}</li>
+            <input class="btn btn-primary" type="submit" value="Buy" id="button-addon2">
+        </div>
+    {% endfor %}
+
+{% endblock%}
+

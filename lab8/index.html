@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = "Correct!";
+                });
+
+                let incorrect = document.querySelectorAll('.incorrect');
+                for(let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = "Incorrect!";
+                    });
+                };
+
+                let check_text = document.querySelector('#check_text');
+                check_text.addEventListener('click', function() {
+                    let answer = document.querySelector('#answer');
+                    if (answer.value.toLowerCase() === "seeker") {
+                        answer.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = "Correct!";
+                    }
+                    else {
+                        answer.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = "Incorrect!";
+                    }
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Harry Potter Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which Weasly brother first owned Scabbers as a pet?</h3>
+
+                <button type="submit" class="incorrect">Charlie</button>
+                <button type="submit" class="incorrect">Bill</button>
+                <button type="submit" class="correct">Percy</button>
+                <button type="submit" class="incorrect">Ron</button>
+
+                <p id="feedback1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What position does Krum play on the Bulgarian Quidditch Team?</h3>
+
+                <input type="text" id="answer">
+                <button type="submit" id="check_text">Check Answer</button>
+
+                <p id="feedback2"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
